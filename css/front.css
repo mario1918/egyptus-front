@@ -712,9 +712,10 @@ footer h1 {
 }
 
 footer p {
-    font-size: 18px;
-    line-height: 37px;
+    font-size: 15px;
+    line-height: 30px;
     color: #fff;
+    margin-top: 20px;
 }
 
 footer h2 {
@@ -727,6 +728,11 @@ footer .copy-right {
     font-size: 18px;
     color: #fff;
     margin-top: 20px;
+}
+
+footer .contact-us
+{
+    margin-top: 25px;
 }
 
 
