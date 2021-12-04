@@ -267,7 +267,6 @@ body::-webkit-scrollbar-thumb {
     backdrop-filter: blur(12px);
 }
 
-
 .landing-section input:hover {
     background-color: #fff;
 }
@@ -306,8 +305,6 @@ body::-webkit-scrollbar-thumb {
 .landing-section a:hover {
     background-color: #d59425;
 }
-
-
 
 .landing-section .whats-happening {
     position: fixed;
@@ -730,8 +727,7 @@ footer .copy-right {
     margin-top: 20px;
 }
 
-footer .contact-us
-{
+footer .contact-us {
     margin-top: 25px;
 }
 
@@ -1342,15 +1338,237 @@ input,
 
 
 /* End Customize Your Own Trip Page Style */
+
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
-.step { position: relative; min-height: 32px /* circle-size */ ; }
-.step > div:first-child { position: static; height: 0; }
-.step > div:last-child { margin-left: 32px ; padding-left: 16px; }
-.circle { background: #4285f4; width: 32px; height: 32px; line-height: 32px; border-radius: 16px; position: relative; color: white; text-align: center; }
-.line { position: absolute; border-left: 1px solid gainsboro; left: 16px; bottom: 10px; top: 42px; }
-.step:last-child .line { display: none; }
-.title { line-height: 32px; font-weight: bold; }
+
+.step {
+    position: relative;
+    min-height: 32px/* circle-size */
+    ;
+}
+
+.step>div:first-child {
+    position: static;
+    height: 0;
+}
+
+.step>div:last-child {
+    margin-left: 32px;
+    padding-left: 16px;
+}
+
+.circle {
+    background: #4285f4;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 16px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.line {
+    position: absolute;
+    border-left: 1px solid gainsboro;
+    left: 16px;
+    bottom: 10px;
+    top: 42px;
+}
+
+.step:last-child .line {
+    display: none;
+}
+
+.title {
+    line-height: 32px;
+    font-weight: bold;
+}
+
+
+/* Profile Settings section */
+
+
+/* Hovering Section */
+
+.profile-photo-hovering {
+    background-color: #0000002f;
+    width: 36rem;
+    height: 48rem;
+    position: absolute;
+    top: 0;
+    text-align: right;
+    display: none;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+@media(max-width:870px) {
+    .profile-photo-hovering {
+        background-color: #0000002f;
+        width: 462px;
+        height: 617px;
+        position: absolute;
+        top: 0;
+        text-align: right;
+        display: none;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+}
+
+.profile-photo-hovering:hover {
+    display: block;
+}
+
+.user-image:hover+.profile-photo-hovering {
+    display: block;
+}
+
+.profile-photo-hovering i,
+.profile-description-hovering i {
+    font-size: 28px;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.profile-description-hovering {
+    background-color: #0000003a;
+    width: 92%;
+    height: 40%;
+    position: absolute;
+    top: 43%;
+    text-align: right;
+    display: none;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.profile-description:hover+.profile-description-hovering {
+    display: block;
+}
+
+.profile-description-hovering:hover {
+    display: block;
+}
+
+.profile-settings {
+    border-radius: 50%;
+    position: absolute;
+    left: 83%;
+    top: 50%;
+    width: 46px;
+    height: 50px;
+    transform: translate(50%, -50%);
+}
+
+.profile-settings i {
+    position: absolute;
+    left: 65px;
+    top: 36%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.profile-settings img {
+    cursor: pointer;
+}
+
+@media(max-width:870px) {
+    .profile-settings {
+        border-radius: 50%;
+        position: absolute;
+        left: 43%;
+        top: 85%;
+        width: 46px;
+        height: 50px;
+        transform: translate(50%, -50%);
+    }
+}
+
+.profile-settings-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    position: absolute;
+    right: 105px;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    transition: var(--main-tranistion);
+    -webkit-transition: var(--main-tranistion);
+    -moz-transition: var(--main-tranistion);
+    -ms-transition: var(--main-tranistion);
+    -o-transition: var(--main-tranistion);
+    z-index: 1;
+}
+
+.profile-settings-dropdown ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #111 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+
+.profile-settings-dropdown ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: var(--main-tranistion);
+    -webkit-transition: var(--main-tranistion);
+    -moz-transition: var(--main-tranistion);
+    -ms-transition: var(--main-tranistion);
+    -o-transition: var(--main-tranistion);
+}
+
+.profile-settings-dropdown ul li a:hover {
+    padding-left: 25px;
+}
+
+.profile-settings-dropdown ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+}
+
+@media(max-width:870px) {
+    .profile-settings-dropdown ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: #111;
+        position: absolute;
+        right: 280px;
+        min-width: 200px;
+        top: calc(100% + 15px);
+        display: none;
+        transition: var(--main-tranistion);
+        -webkit-transition: var(--main-tranistion);
+        -moz-transition: var(--main-tranistion);
+        -ms-transition: var(--main-tranistion);
+        -o-transition: var(--main-tranistion);
+        z-index: 1;
+    }
+}
+
+
+/* End Profile Settings Section */
